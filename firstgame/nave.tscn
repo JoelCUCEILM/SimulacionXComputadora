@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://cuhy2f17no6dq"]
+
+[ext_resource type="Script" uid="uid://dprn0rrdm5rou" path="res://nave.gd" id="1_ilgfq"]
+[ext_resource type="Texture2D" uid="uid://4tx1xa4maktn" path="res://icon.svg" id="2_j1vys"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_i7odh"]
+radius = 26.0
+height = 52.0
+
+[node name="Nave" type="Area2D"]
+script = ExtResource("1_ilgfq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1.25, 0.812492)
+scale = Vector2(0.433594, 0.450195)
+texture = ExtResource("2_j1vys")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 0.624977)
+shape = SubResource("CapsuleShape2D_i7odh")
+debug_color = Color(2.88785e-06, 0.621344, 0.5551, 0.42)
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

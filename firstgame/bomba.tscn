@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://cgx2xn8cgblhn"]
+
+[ext_resource type="Script" uid="uid://c77souow0au3r" path="res://bomba.gd" id="1_jlaks"]
+[ext_resource type="Texture2D" uid="uid://q7v7h1bnq0b" path="res://588713cbd27829db9cf6da6a.png" id="2_ncxna"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xbmtn"]
+radius = 24.0
+
+[node name="Bomba" type="Area2D"]
+script = ExtResource("1_jlaks")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(7.42773, -5.74609)
+scale = Vector2(0.116857, 0.106341)
+texture = ExtResource("2_ncxna")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.427734, 1.25391)
+shape = SubResource("CircleShape2D_xbmtn")
+debug_color = Color(0.907224, 0.301649, 1.92523e-07, 0.42)

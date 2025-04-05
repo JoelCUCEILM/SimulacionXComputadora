@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://bowufjdb5m1bh"]
+
+[ext_resource type="Script" uid="uid://bj4dqlqpqomkb" path="res://juego.gd" id="1_ipdbw"]
+
+[node name="Juego" type="Node2D"]
+position = Vector2(6, -6)
+script = ExtResource("1_ipdbw")
+
+[node name="GeneradorTimer" type="Timer" parent="."]
+autostart = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[connection signal="timeout" from="GeneradorTimer" to="." method="_on_GeneradorTimer_timeout"]
